@@ -1,4 +1,3 @@
-
-from CreationalPatterns.Builder.BuilderMain import main
+from CreationalPatterns.Factory.FactoryMain import main
 if __name__ == "__main__":
     main()
