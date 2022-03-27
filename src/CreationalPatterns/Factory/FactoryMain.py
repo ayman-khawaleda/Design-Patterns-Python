@@ -1,7 +1,8 @@
-from CreationalPatterns.Factory.FactoryMethod import PointFactory
+from CreationalPatterns.Factory.AbstractFactory import *
 
 def main():
-    p1 = PointFactory.new_cartesian_point(20,10)
-    p2 = PointFactory.new_polar_point(5,45)
-    print(p1)
-    print(p2)
+    hdm = HotDrinkMaker(Tea=TeaFactory,Moka=MokaFactory)
+    hdm.add_beverage('Coffee',CoffeeFactory)
+    beverage = hdm.make_drink()
+
+    beverage.consume()
