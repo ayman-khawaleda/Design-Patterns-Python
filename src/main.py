@@ -1,3 +1,3 @@
-from Structural.Adapter.AdapterMain import main
+from Structural.Bridge.BridgeMain import main
 if __name__ == "__main__":
     main()
