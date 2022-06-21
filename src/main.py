@@ -1,3 +1,3 @@
-from Structural.Bridge.BridgeMain import main
+from Structural.Composite.CompositeMain import main
 if __name__ == "__main__":
     main()
