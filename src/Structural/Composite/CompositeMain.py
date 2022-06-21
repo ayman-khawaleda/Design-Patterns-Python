@@ -1,16 +1,17 @@
-from tokenize import group
-from Structural.Composite import *
-from Structural.Composite.Composite import Circle, GraphicObject, Square
+from Structural.Composite.CompositeNN import Neuron, NeuronLayer
 
 def main():
-    drawing = GraphicObject()
-    drawing._name = 'Basic Draw'
-    drawing.Children.append(Square('Red'))
-    drawing.Children.append(Circle('Green'))
-    
-    groupObj = GraphicObject('Yellow')
-    groupObj.Children.append(Circle('Pink'))
-    groupObj.Children.append(Square('Purple'))
-    drawing.Children.append(groupObj)
+    n1 = Neuron('n1')
+    n2 = Neuron('n2')
+    nlayer1 = NeuronLayer('L1',3)
+    nlayer2 = NeuronLayer('L2',4)
 
-    print(drawing)
+    n1.connect_to(n2)
+    n1.connect_to(nlayer1)
+    nlayer1.connect_to(n2)
+    nlayer1.connect_to(nlayer2)
+
+    print(n1)
+    print(n2)
+    print(nlayer1)
+    print(nlayer2)
